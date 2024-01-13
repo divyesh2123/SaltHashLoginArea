@@ -1,0 +1,23 @@
+﻿@model List<WebApplication22.ViewModal.MyJobData>
+
+<table>
+
+    @foreach (var t in Model)
+    {
+
+    <tr>
+
+        <td>@t.JobTitle</td>
+
+        <td>@t.JobDescription</td>
+
+        <td>@t.HourlyPay</td>
+
+    </tr>
+
+      
+
+
+    }
+
+</table>

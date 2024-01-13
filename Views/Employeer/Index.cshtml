@@ -1,0 +1,22 @@
+﻿@model List<WebApplication22.ViewModal.MyJobData>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@{
+Html.RenderPartial("_ListJobData", Model);
+
+}
+
+<div id="display"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+    $.ajax({
+        url: "@Url.Action("ListJobData","User")", success: function (result) {
+            $("#display").html(result);
+        }
+    });
+
+</script>

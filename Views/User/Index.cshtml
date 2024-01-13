@@ -1,0 +1,52 @@
+﻿@model WebApplication22.ViewModal.UserViewModal
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "User", FormMethod.Post))
+{
+
+    @Html.TextBoxFor(y => y.CompanyEmailAddress)
+    @Html.ValidationMessageFor(y => y.CompanyEmailAddress)
+
+
+    @Html.TextBoxFor(y => y.WorkingHours)
+    @Html.ValidationMessageFor(y => y.WorkingHours)
+
+
+    @Html.TextBoxFor(y => y.CurrentPassword)
+    @Html.ValidationMessageFor(y => y.CurrentPassword)
+
+
+    @Html.TextBoxFor(y => y.ComparedPassword)
+    @Html.ValidationMessageFor(y => y.ComparedPassword)
+
+
+    @Html.TextBoxFor(y => y.CompanyPhoneNumber)
+    @Html.ValidationMessageFor(y => y.CompanyPhoneNumber)
+
+
+
+    @Html.TextBoxFor(y => y.MinimumSalaryPerEmp)
+    @Html.ValidationMessageFor(y => y.MinimumSalaryPerEmp)
+
+
+
+    @Html.TextBoxFor(y => y.UserName)
+    @Html.ValidationMessageFor(y => y.UserName)
+
+
+    @Html.LabelFor(model => model.HireDate, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.HireDate, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.HireDate)
+    </div>
+    
+
+    <input type="submit" value="save" />
+
+
+
+
+
+}
